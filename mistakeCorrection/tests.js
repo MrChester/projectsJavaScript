@@ -5,6 +5,13 @@
 
 let isSomeTrue = require('./homeWork2/isSomeTrueFunction.js');
 
-let isNumber = require('./homeWork2/isNumberFunction.js');
+let isAllTrue = require('./homeWork1/isAllTrueFunction.js');
 
-console.log(isSomeTrue([1,2,3,4,5], isNumber));
+let isNumber = require('./isNumberFunction.js');
+
+
+// test for isAllTrue
+console.log(isAllTrue([1, 'hello'], isNumber));
+
+// test for isSomeTrue
+console.log(isSomeTrue([1,2,'hello',4,5], isNumber));
