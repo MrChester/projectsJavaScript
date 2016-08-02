@@ -12,6 +12,8 @@ let isNumber = require('./isNumberFunction.js');
 
 // test for isAllTrue
 console.log(isAllTrue([1, 'hello'], isNumber));
+console.log(isAllTrue([], isNumber));
+console.log(isAllTrue('hello', isNumber));
 
 // test for isSomeTrue
 console.log(isSomeTrue([1,2,'hello',4,5], isNumber));
