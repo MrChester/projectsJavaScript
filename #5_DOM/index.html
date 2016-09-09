@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practiseDOM</title>
+    <style type="text/css">
+        .header{
+            width: 500px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        .maincontent{
+            width: 500px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        .content{
+            padding: 5px;
+            width: 200px;
+            height: 50px;
+            background-color: brown;
+        }
+        .firstElem{
+            width: 500px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        .secondElem{
+            width: 500px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        .thirdElem{
+            width: 500px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        .footer{
+            width: 500px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <header class="header">this is header</header>
+    <div class="maincontent">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <p class="firstElem">first elem</p>
+    <!--комментарий-->
+    <p class="secondElem">second elem</p>
+    <p class="thirdElem">third elem</p>
+    <footer class="footer">this is footer</footer>
+</div>
+
+<script>
+    var vewNodesCounter = 0;
+    function viewNodes(Node) {
+        var i, elems;
+        elems = Node.childNodes;
+        console.groupCollapsed('viewNodes');
+        console.log(elems);
+        for(i = 0; i < Node.childNodes.length; i++){
+
+            var childNode = Node.childNodes[i];
+            var nodeType = childNode.nodeType;
+            var tagName = childNode.tagName;
+
+            if(nodeType === 3){
+                vewNodesCounter++;
+
+            }
+            if(nodeType !== 3){
+                viewNodes(childNode);
+            }
+
+        }
+        console.log(vewNodesCounter);
+        console.groupEnd('viewNodes');
+    }
+    function deleteTextNodes(Node) {
+        var div = document.getElementById('d1');
+        var elems = Node.childNodes;
+        console.groupCollapsed('deleteTextNodes');
+        console.log(elems);
+        for(var i=0; i<Node.childNodes.length; i++) {
+            var childNode = Node.childNodes[i];
+//            console.log(elems[i].nodeType);
+            if(childNode.nodeType === 3){
+                Node.removeChild(Node.childNodes[i]);
+                i--;
+            }
+            if(childNode.nodeType !== 3){
+                deleteTextNodes(childNode);
+            }
+        }
+        console.log(elems);
+        console.groupEnd('deleteTextNodes');
+    }
+    viewNodes(document.getElementById('d1'));
+    deleteTextNodes(document.getElementById('d1'));
+</script>
+</body>
+</html>
