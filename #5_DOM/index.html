@@ -82,39 +82,16 @@
         console.log(vewNodesCounter);
         console.groupEnd('viewNodes');
     }
-//    function deleteTextNodes(Node) {
-//        var div = document.getElementById('d1');
-//        var elems = Node.childNodes;
-//        console.groupCollapsed('deleteTextNodes');
-//        console.log(elems);
-//        for(var i=0; i<Node.childNodes.length; i++) {
-//            var childNode = Node.childNodes[i];
-////            console.log(elems[i].nodeType);
-//            if(childNode.nodeType === 3){
-//                Node.removeChild(Node.childNodes[i]);
-//                i--;
-//            }
-//            if(childNode.nodeType !== 3){
-//                deleteTextNodes(childNode);
-//            }
-//        }
-//        console.log(elems);
-//        console.groupEnd('deleteTextNodes');
-//    }
-    
-    function prepend(container, newElement) {
 
-        container.insertBefore(newElement, container.firstChild)
-    }
 
-    var container = document.getElementById('d1');
-    var newElement = document.createElement('div');
-    newElement.style = 'width: 500px;height: 50px;background-color: antiquewhite;margin-bottom: 10px;';
-    newElement.innerHTML = 'Привет мир!!!';
-    prepend(container, newElement);
+
     viewNodes(document.getElementById('d1'));
-//    deleteTextNodes(document.getElementById('d1'));
-//    сделать кнопку по нажатию которой будет происходить удаление текстовых узлов
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.src.js"></script>
+<script>
+    <!-- start server http-server -c-1 -->
+    SystemJS.import('/js/main.js');
 </script>
 </body>
 </html>
