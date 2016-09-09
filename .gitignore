@@ -1,4 +1,7 @@
 # phpstorm folder .idea
 .idea/
 
+
+node_modules/
+
 multiinst
