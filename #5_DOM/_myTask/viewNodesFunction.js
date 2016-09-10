@@ -1,0 +1,24 @@
+/**
+ * Created by fallenSoulDev on 10.09.2016.
+ */
+var vewNodesCounter = 0;
+function viewNodes(Node) {
+
+    var nodeChilds = Node.childNodes;
+    console.groupCollapsed('viewNodes');
+    console.log(nodeChilds);
+    for ( var i = 0; i < Node.childNodes.length; i++) {
+        var childNode = Node.childNodes[i];
+        var nodeType = childNode.nodeType;
+        if (nodeType === 3) {
+            vewNodesCounter++;
+        }
+        if (nodeType !== 3) {
+            viewNodes(childNode);
+        }
+    }
+    console.log(vewNodesCounter);
+    console.groupEnd('viewNodes');
+}
+
+module.exports = viewNodes;

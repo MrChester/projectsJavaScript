@@ -2,22 +2,18 @@
  * Created by fallenSoulDev on 10.09.2016.
  */
 function noRecursionDeleteTextNodes(Node) {
-    var elems = Node.childNodes;
-    console.groupCollapsed('deleteTextNodes');
-    console.log(elems);
+    var nodeChilds = Node.childNodes;
+    console.groupCollapsed('noRecursionDeleteTextNodes');
+    console.log(nodeChilds);
     for (var i = 0; i < Node.childNodes.length; i++) {
         var childNode = Node.childNodes[i];
-//            console.log(elems[i].nodeType);
         if (childNode.nodeType === 3) {
             Node.removeChild(Node.childNodes[i]);
             i--;
         }
-        // if(childNode.nodeType !== 3){
-        //     deleteTextNodes(childNode);
-        // }
     }
-    console.log(elems);
-    console.groupEnd('deleteTextNodes');
+    console.log(nodeChilds);
+    console.groupEnd('noRecursionDeleteTextNodes');
 }
 
 

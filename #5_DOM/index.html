@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <title>practiseDOM</title>
     <style type="text/css">
-        .header{
+        .header {
             width: 500px;
             height: 50px;
             background-color: antiquewhite;
         }
-        .maincontent{
+
+        .maincontent {
             width: 500px;
             height: 100px;
             background-color: aquamarine;
         }
-        .content{
+
+        .content {
             padding: 5px;
             width: 200px;
             height: 50px;
             background-color: brown;
         }
-        .firstElem{
+
+        .firstElem {
             width: 500px;
             height: 50px;
             background-color: antiquewhite;
         }
-        .secondElem{
+
+        .secondElem {
             width: 500px;
             height: 50px;
             background-color: antiquewhite;
         }
-        .thirdElem{
+
+        .thirdElem {
             width: 500px;
             height: 50px;
             background-color: antiquewhite;
         }
-        .footer{
+
+        .footer {
             width: 500px;
             height: 50px;
             background-color: antiquewhite;
@@ -57,40 +63,8 @@
     <footer class="footer">this is footer</footer>
 </div>
 
-<script>
-    var vewNodesCounter = 0;
-    function viewNodes(Node) {
-        var i, elems;
-        elems = Node.childNodes;
-        console.groupCollapsed('viewNodes');
-        console.log(elems);
-        for(i = 0; i < Node.childNodes.length; i++){
-
-            var childNode = Node.childNodes[i];
-            var nodeType = childNode.nodeType;
-            var tagName = childNode.tagName;
-
-            if(nodeType === 3){
-                vewNodesCounter++;
-
-            }
-            if(nodeType !== 3){
-                viewNodes(childNode);
-            }
-
-        }
-        console.log(vewNodesCounter);
-        console.groupEnd('viewNodes');
-    }
-
-
-
-    viewNodes(document.getElementById('d1'));
-
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.src.js"></script>
 <script>
-    <!-- start server http-server -c-1 -->
     SystemJS.import('/js/main.js');
 </script>
 </body>

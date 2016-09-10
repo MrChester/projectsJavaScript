@@ -2,12 +2,11 @@
  * Created by fallenSoulDev on 10.09.2016.
  */
 function recursionDeleteTextNodes(Node) {
-    var elems = Node.childNodes;
+    var nodeChilds = Node.childNodes;
     console.groupCollapsed('recursionDeleteTextNodes');
-    console.log(elems);
+    console.log(nodeChilds);
     for (var i = 0; i < Node.childNodes.length; i++) {
         var childNode = Node.childNodes[i];
-//            console.log(elems[i].nodeType);
         if (childNode.nodeType === 3) {
             Node.removeChild(Node.childNodes[i]);
             i--;
@@ -16,9 +15,8 @@ function recursionDeleteTextNodes(Node) {
             recursionDeleteTextNodes(childNode);
         }
     }
-    console.log(elems);
+    console.log(nodeChilds);
     console.groupEnd('recursionDeleteTextNodes');
 }
-
 
 module.exports = recursionDeleteTextNodes;
