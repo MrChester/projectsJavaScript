@@ -14,7 +14,7 @@ newElement.innerHTML = 'Привет мир!!!';
 prepend(container, newElement);
 
 //node manipulation
-//my task, viewNodes
+//my task, viewNodes and textNodesCounter
 viewNodes(document.getElementById('d1'));
 
 // сделать кнопку по нажатию которой будет происходить удаление текстовых узлов
