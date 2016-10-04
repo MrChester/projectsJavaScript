@@ -7,7 +7,7 @@ let noRecursionDeleteTextNodes = require('../homework2/noRecursionDeleteTextNode
 let recursionDeleteTextNodes = require('../homework3/recursionDeleteTextNodes.js');
 
 //prepend function
-let container = document.getElementById('d1');
+let container = document.getElementById('wrapper');
 let newElement = document.createElement('div');
 newElement.style = 'width: 500px;height: 50px;background-color: antiquewhite;margin-bottom: 10px;';
 newElement.innerHTML = 'Привет мир!!!';
@@ -15,14 +15,14 @@ prepend(container, newElement);
 
 //node manipulation
 //my task, viewNodes and textNodesCounter
-viewNodes(document.getElementById('d1'));
+viewNodes(document.getElementById('wrapper'));
 
 // сделать кнопку по нажатию которой будет происходить удаление текстовых узлов
 // noRecursionDeleteTextNodes
 
-noRecursionDeleteTextNodes(document.getElementById('d1'));
+noRecursionDeleteTextNodes(document.getElementById('wrapper'));
 
 // recursionDeleteTextNodes
 
-recursionDeleteTextNodes(document.getElementById('d1'));
+recursionDeleteTextNodes(document.getElementById('wrapper'));
 
