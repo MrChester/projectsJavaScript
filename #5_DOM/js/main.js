@@ -5,6 +5,7 @@ let prepend = require('../homework1/prependFunction.js');
 let viewNodes = require('../_myTask/viewNodesFunction.js');
 let noRecursionDeleteTextNodes = require('../homework2/noRecursionDeleteTextNodes.js');
 let recursionDeleteTextNodes = require('../homework3/recursionDeleteTextNodes.js');
+let scanDom = require('../homework4/scanDom.js');
 
 //prepend function
 let container = document.getElementById('wrapper');
@@ -15,14 +16,17 @@ prepend(container, newElement);
 
 //node manipulation
 //my task, viewNodes and textNodesCounter
-viewNodes(document.getElementById('wrapper'));
+// viewNodes(document.getElementById('wrapper'));
 
 // сделать кнопку по нажатию которой будет происходить удаление текстовых узлов
 // noRecursionDeleteTextNodes
 
-noRecursionDeleteTextNodes(document.getElementById('wrapper'));
+// noRecursionDeleteTextNodes(document.getElementById('wrapper'));
 
 // recursionDeleteTextNodes
 
-recursionDeleteTextNodes(document.getElementById('wrapper'));
+// recursionDeleteTextNodes(document.getElementById('wrapper'));
+
+//сканирование дом дерева и подсчет узлов
+scanDom(document.getElementById('wrapper'));
 
