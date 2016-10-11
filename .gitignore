@@ -5,3 +5,4 @@ multiinst
 node_modules/
 
 usefulDev/
+!git.md
