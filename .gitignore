@@ -2,7 +2,7 @@
 node_modules/
 
 # игнорирование некоторых файлов в папке usefulDev
-/usefulDev/*
+usefulDev/*
 !howToCreateAndUseGitHubRepository.md
 !localServer.txt
 !usefulSublimeTextPlugins.md
