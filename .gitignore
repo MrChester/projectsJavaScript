@@ -2,5 +2,6 @@ multiinst
 
 node_modules/
 
-.idea/
+usefulDev/
 
+JetBrains.gitignore
