@@ -4,6 +4,4 @@ multiinst
 
 node_modules/
 
-links.md
-soft.md
-wp-plugins.md
+usefulDev/
