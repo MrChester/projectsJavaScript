@@ -1,0 +1,10 @@
+.idea/
+
+multiinst
+
+node_modules/
+
+usefulDev/
+!howToCreateAndUseGitHubRepository.md
+!usefulSublimeTextPlugins.md
+!localServer.txt
