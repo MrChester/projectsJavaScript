@@ -6,6 +6,4 @@ node_modules/
 
 multiinst
 
-usefulDev/links.md
-usefulDev/soft.md
-usefulDev/wp-plugins.md
+usefulDev/*
