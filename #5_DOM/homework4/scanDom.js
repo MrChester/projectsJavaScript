@@ -22,9 +22,13 @@ function scanDom(Node) {
             textNodesCounter++;
         }
     }
-    console.log(`Текстовых узлов: ${textNodesCounter}`);
-}
+    return textNodesCounter;
 
+    function counter(tagMap) {
+
+    }
+
+}
 console.log(tagMap);
 console.log(classesMap);
 

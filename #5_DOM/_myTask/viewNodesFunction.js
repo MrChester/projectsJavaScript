@@ -3,9 +3,6 @@
  */
 var textNodesCounter = 0;
 function viewNodes(Node) {
-
-    console.groupCollapsed('viewNodes');
-
     for (var i = 0; i < Node.childNodes.length; i++) {
         var childNode = Node.childNodes[i];
         var nodeType = childNode.nodeType;
@@ -16,9 +13,6 @@ function viewNodes(Node) {
             viewNodes(childNode);
         }
     }
-    console.log(`Текстовых узлов: ${textNodesCounter}`);
-    console.groupEnd('viewNodes');
 }
-console.log(`Текстовых узлов: ${textNodesCounter}`);
 
 module.exports = viewNodes;
