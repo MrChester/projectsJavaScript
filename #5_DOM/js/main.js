@@ -29,15 +29,4 @@ prepend(container, newElement);
 // recursionDeleteTextNodes(document.getElementById('wrapper'));
 
 //сканирование дом дерева и подсчет узлов
-// let counter = scanDom(document.getElementById('wrapper'));
-let counter = scanDom(document.documentElement);
-
-console.log(counter);
-// let results = function () {
-//     scanDom(document.documentElement);
-// }
-// results();
-
-
-// scanDom(document.getElementById('wrapper'));
-
+scanDom(document.documentElement);
