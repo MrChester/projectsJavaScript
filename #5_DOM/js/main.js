@@ -34,7 +34,6 @@ function results(){
 var res = scanDom(document.documentElement);
 
 	console.log(res);
-	// console.log(textNodesCounter);
 }
 
 results();

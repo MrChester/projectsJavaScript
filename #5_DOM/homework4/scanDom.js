@@ -12,29 +12,19 @@ function scanDom(Node) {
     for (var i = 0; i < Node.childNodes.length; i++) {
 
         var childNode = Node.childNodes[i];
+        var tag = childNode.tagName;
         if (childNode.nodeType === 1) {
-            // resultMap.set(collectionResultIndex, childNode.tagName);
-            // collectionResultIndex++;
-            // resultMap.set(collectionResultIndex, childNode.className);
-            resultMap.set(childNode.tagName, collectionAmountOfTags);
-            resultMap.set(childNode.className, collectionAmountOfClasses);
-
+            resultMap.set(tag, collectionAmountOfTags);
+            // перебор 
+        // for (let key of resultMap.keys()) {
+        //     console.log(key);
+        // }
         }
 
-        // перебор 
-        for (let tag of resultMap.keys()) {
-            console.group('qwerty');
-            console.log(tag);
-            console.groupEnd('qwerty');
-
-        }
+        
         if (childNode.nodeType !== 3) {
-            // collectionResultIndex++;
             scanDom(childNode);
         } else {
-            // collectionResultIndex++;
-            // resultMap.set(collectionResultIndex, childNode.nodeName);
-            // collectionResultIndex++;
             textNodesCounter++;
         }
     }
