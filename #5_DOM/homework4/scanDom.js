@@ -15,16 +15,16 @@ function scanDom(Node) {
         var tag = childNode.tagName;
         if (childNode.nodeType === 1) {
             resultMap.set(tag, collectionAmountOfTags);
-            // перебор 
-        for (let key of resultMap.keys()) {
-            if(key === childNode){
-                collectionAmountOfTags++;
-            }
-            console.log(key);
-        }
         }
 
-        
+        if (resultMap.get(tag) === null) {
+                resultMap.set(tag, 1);
+            } else {
+                collectionAmountOfTags = resultMap.get(tag) + 1;
+                resultMap.set(tag, collectionAmountOfTags);
+            }
+
+
         if (childNode.nodeType !== 3) {
             scanDom(childNode);
         } else {
