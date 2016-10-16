@@ -3,7 +3,7 @@
  */
 var resultMap = new Map();
 var collectionResultIndex = 0;
-var collectionAmountOfTags = 0;
+var collectionAmountOfTags = 1;
 var collectionAmountOfClasses = 0;
 var textNodesCounter = 0;
 
@@ -16,9 +16,12 @@ function scanDom(Node) {
         if (childNode.nodeType === 1) {
             resultMap.set(tag, collectionAmountOfTags);
             // перебор 
-        // for (let key of resultMap.keys()) {
-        //     console.log(key);
-        // }
+        for (let key of resultMap.keys()) {
+            if(key === childNode){
+                collectionAmountOfTags++;
+            }
+            console.log(key);
+        }
         }
 
         
