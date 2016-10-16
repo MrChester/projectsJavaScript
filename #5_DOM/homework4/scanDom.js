@@ -3,6 +3,9 @@
  */
 var resultMap = new Map();
 var collectionResultIndex = 0;
+var collectionAmountOfTags = 0;
+var collectionAmountOfClasses = 0;
+var textNodesCounter = 0;
 
 function scanDom(Node) {
 
@@ -10,32 +13,37 @@ function scanDom(Node) {
 
         var childNode = Node.childNodes[i];
         if (childNode.nodeType === 1) {
-            resultMap.set(collectionResultIndex, childNode.tagName);
-            collectionResultIndex++;
-            resultMap.set(collectionResultIndex, childNode.className);
+            // resultMap.set(collectionResultIndex, childNode.tagName);
+            // collectionResultIndex++;
+            // resultMap.set(collectionResultIndex, childNode.className);
+            resultMap.set(childNode.tagName, collectionAmountOfTags);
+            resultMap.set(childNode.className, collectionAmountOfClasses);
+
+        }
+
+        // перебор 
+        for (let tag of resultMap.keys()) {
+            console.group('qwerty');
+            console.log(tag);
+            console.groupEnd('qwerty');
+
         }
         if (childNode.nodeType !== 3) {
-            collectionResultIndex++;
+            // collectionResultIndex++;
             scanDom(childNode);
-        }
-        else {
-            collectionResultIndex++;
-            resultMap.set(collectionResultIndex, childNode.nodeName);
-            collectionResultIndex++;
+        } else {
+            // collectionResultIndex++;
+            // resultMap.set(collectionResultIndex, childNode.nodeName);
+            // collectionResultIndex++;
+            textNodesCounter++;
         }
     }
+    return resultMap;
+
 
 }
 
-function counterDomNodes(){
-    let a = 3;
-    return a;
-}
 
-counterDomNodes();
-
-console.log(a);
-console.log(resultMap);
 
 module.exports = scanDom;
 /**

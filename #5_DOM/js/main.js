@@ -29,4 +29,13 @@ prepend(container, newElement);
 // recursionDeleteTextNodes(document.getElementById('wrapper'));
 
 //сканирование дом дерева и подсчет узлов
-scanDom(document.documentElement);
+
+function results(){
+var res = scanDom(document.documentElement);
+
+	console.log(res);
+	// console.log(textNodesCounter);
+}
+
+results();
+
