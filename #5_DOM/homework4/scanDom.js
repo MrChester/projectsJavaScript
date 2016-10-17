@@ -4,42 +4,27 @@
 var tagNameMap = new Map();
 var classNameMap = new Map();
 var textNodesMap = new Map();
-// var collectionAmountOfTags = 0;
-var collectionAmountOfClasses = 0;
-var textNodesCounter = 0;
 
 function scanDom(Node) {
 
     for (var i = 0; i < Node.childNodes.length; i++) {
-
+        var collectionAmountOfTags = 0;
         var childNode = Node.childNodes[i];
         var tag = childNode.tagName;
         var className = childNode.className;
         if (childNode.nodeType === 1) {
-            if (tagNameMap.get(tag) === undefined && classNameMap.get(className) === undefined) {
-                tagNameMap.set(tag, 1);
-                // classNameMap.set(className, 1);
-            } else {
-                tagNameMap.forEach(function (value, key) {
-                    if (key === tag) {
-                        let collectionAmountOfTags = value + 1;
-                        tagNameMap.set(tag, collectionAmountOfTags);
-
-                    }
-                })
-                // classNameMap.forEach(function (value, key) {
-                //     if (key === className) {
-                //         collectionAmountOfClasses = value + 1;
-                //         classNameMap.set(className, collectionAmountOfClasses);
-                //     }
-                // })
+            if (!tagNameMap.has(tag)) {
+                collectionAmountOfTags = 1;
+                tagNameMap.set(tag, collectionAmountOfTags);
             }
-
+            else {
+                let val = tagNameMap.get(collectionAmountOfTags);
+                let count = parseInt(val) + 1;
+                tagNameMap.set(tag, count);
+            }
         }
         if (childNode.nodeType !== 3) {
             scanDom(childNode);
-        } else {
-            textNodesCounter++;
         }
     }
 }
