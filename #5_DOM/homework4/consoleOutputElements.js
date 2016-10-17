@@ -5,8 +5,8 @@ function consoleOutputElements() {
     let tags = scanDom(document.documentElement);
     let tag, classes, textNodes;
 
-    for(let i = 0; i<tags.length; i++){
-        switch (i){
+    for (let i = 0; i < tags.length; i++) {
+        switch (i) {
             case 0:
                 tag = tags[i];
                 break;
@@ -19,15 +19,14 @@ function consoleOutputElements() {
         }
     }
 
-    tag.forEach( (value, key) => {
+    tag.forEach((value, key) => {
         console.log(`Тегов ${key}: ${value}`);
     });
-    classes.forEach( (value, key) => {
+    classes.forEach((value, key) => {
         console.log(`Классов ${key}: ${value}`);
     });
-    textNodes.forEach( (value, key) => {
-        console.log(`Текстовых узлов: ${value}`);
-    });
+    console.log(`Текстовых узлов: ${textNodes}`);
+
 }
 
 module.exports = consoleOutputElements;

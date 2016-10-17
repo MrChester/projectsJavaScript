@@ -4,6 +4,7 @@
 var tagNameMap = new Map();
 var classNameMap = new Map();
 var textNodesMap = new Map();
+var textNodeCounter = 0;
 
 function scanDom(Node) {
 
@@ -36,17 +37,18 @@ function scanDom(Node) {
             scanDom(childNode);
         }
         else {
-            if (!textNodesMap.has(nodeName)) {
-                textNodesMap.set(nodeName, 1);
-            }
-            else {
-                let val = textNodesMap.get(nodeName);
-                let count = parseInt(val) + 1;
-                textNodesMap.set(nodeName, count);
-            }
+            // if (!textNodesMap.has(nodeName)) {
+            //     textNodesMap.set(nodeName, 1);
+            // }
+            // else {
+            //     let val = textNodesMap.get(nodeName);
+            //     let count = parseInt(val) + 1;
+            //     textNodesMap.set(nodeName, count);
+            // }
+            textNodeCounter++;
         }
     }
-    return [tagNameMap, classNameMap, textNodesMap];
+    return [tagNameMap, classNameMap, textNodeCounter];
 }
 
 module.exports = scanDom;
