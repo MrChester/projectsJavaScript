@@ -4,7 +4,7 @@
 var tagNameMap = new Map();
 var classNameMap = new Map();
 var textNodesMap = new Map();
-var collectionAmountOfTags = 0;
+// var collectionAmountOfTags = 0;
 var collectionAmountOfClasses = 0;
 var textNodesCounter = 0;
 
@@ -18,21 +18,21 @@ function scanDom(Node) {
         if (childNode.nodeType === 1) {
             if (tagNameMap.get(tag) === undefined && classNameMap.get(className) === undefined) {
                 tagNameMap.set(tag, 1);
-                classNameMap.set(className, 1);
+                // classNameMap.set(className, 1);
             } else {
                 tagNameMap.forEach(function (value, key) {
                     if (key === tag) {
-                        collectionAmountOfTags = value + 1;
+                        let collectionAmountOfTags = value + 1;
                         tagNameMap.set(tag, collectionAmountOfTags);
 
                     }
                 })
-                classNameMap.forEach(function (value, key) {
-                    if (key === className) {
-                        collectionAmountOfClasses = value + 1;
-                        classNameMap.set(className, collectionAmountOfClasses);
-                    }
-                })
+                // classNameMap.forEach(function (value, key) {
+                //     if (key === className) {
+                //         collectionAmountOfClasses = value + 1;
+                //         classNameMap.set(className, collectionAmountOfClasses);
+                //     }
+                // })
             }
 
         }
@@ -44,7 +44,7 @@ function scanDom(Node) {
     }
 }
 console.log(tagNameMap);
-console.log(classNameMap);
+// console.log(classNameMap);
 
 module.exports = scanDom;
 /**
