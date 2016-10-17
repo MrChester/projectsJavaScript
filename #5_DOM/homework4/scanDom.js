@@ -37,14 +37,6 @@ function scanDom(Node) {
             scanDom(childNode);
         }
         else {
-            // if (!textNodesMap.has(nodeName)) {
-            //     textNodesMap.set(nodeName, 1);
-            // }
-            // else {
-            //     let val = textNodesMap.get(nodeName);
-            //     let count = parseInt(val) + 1;
-            //     textNodesMap.set(nodeName, count);
-            // }
             textNodeCounter++;
         }
     }
