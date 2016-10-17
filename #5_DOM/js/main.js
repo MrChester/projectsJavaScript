@@ -6,7 +6,7 @@ let viewNodes = require('../_myTask/viewNodesFunction.js');
 let noRecursionDeleteTextNodes = require('../homework2/noRecursionDeleteTextNodes.js');
 let recursionDeleteTextNodes = require('../homework3/recursionDeleteTextNodes.js');
 let scanDom = require('../homework4/scanDom.js');
-let scanDom2 = require('../homework4/scanDom2.js');
+// let scanDom2 = require('../homework4/scanDom2.js');
 
 
 //prepend function

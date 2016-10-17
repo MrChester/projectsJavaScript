@@ -8,17 +8,15 @@ var textNodesMap = new Map();
 function scanDom(Node) {
 
     for (var i = 0; i < Node.childNodes.length; i++) {
-        var collectionAmountOfTags = 0;
         var childNode = Node.childNodes[i];
         var tag = childNode.tagName;
-        var className = childNode.className;
+        // var className = childNode.className;
         if (childNode.nodeType === 1) {
             if (!tagNameMap.has(tag)) {
-                collectionAmountOfTags = 1;
-                tagNameMap.set(tag, collectionAmountOfTags);
+                tagNameMap.set(tag, 1);
             }
             else {
-                let val = tagNameMap.get(collectionAmountOfTags);
+                let val = tagNameMap.get(tag);
                 let count = parseInt(val) + 1;
                 tagNameMap.set(tag, count);
             }
