@@ -30,11 +30,5 @@ prepend(container, newElement);
 
 //сканирование дом дерева и подсчет узлов
 
-function results(){
-var res = scanDom(document.documentElement);
-
-	console.log(res);
-}
-
-results();
+scanDom(document.documentElement);
 

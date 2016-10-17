@@ -1,9 +1,10 @@
 /**
  * Created by fallenSoulDev on 10.09.2016.
  */
-var resultMap = new Map();
-var collectionResultIndex = 0;
-var collectionAmountOfTags = 1;
+var tagNameMap = new Map();
+var classNameMap = new Map();
+var textNodesMap = new Map();
+var collectionAmountOfTags = 0;
 var collectionAmountOfClasses = 0;
 var textNodesCounter = 0;
 
@@ -13,30 +14,37 @@ function scanDom(Node) {
 
         var childNode = Node.childNodes[i];
         var tag = childNode.tagName;
+        var className = childNode.className;
         if (childNode.nodeType === 1) {
-            resultMap.set(tag, collectionAmountOfTags);
-        }
-
-        if (resultMap.get(tag) === null) {
-                resultMap.set(tag, 1);
+            if (tagNameMap.get(tag) === undefined && classNameMap.get(className) === undefined) {
+                tagNameMap.set(tag, 1);
+                classNameMap.set(className, 1);
             } else {
-                collectionAmountOfTags = resultMap.get(tag) + 1;
-                resultMap.set(tag, collectionAmountOfTags);
+                tagNameMap.forEach(function (value, key) {
+                    if (key === tag) {
+                        collectionAmountOfTags = value + 1;
+                        tagNameMap.set(tag, collectionAmountOfTags);
+
+                    }
+                })
+                classNameMap.forEach(function (value, key) {
+                    if (key === className) {
+                        collectionAmountOfClasses = value + 1;
+                        classNameMap.set(className, collectionAmountOfClasses);
+                    }
+                })
             }
 
-
+        }
         if (childNode.nodeType !== 3) {
             scanDom(childNode);
         } else {
             textNodesCounter++;
         }
     }
-    return resultMap;
-
-
 }
-
-
+console.log(tagNameMap);
+console.log(classNameMap);
 
 module.exports = scanDom;
 /**
