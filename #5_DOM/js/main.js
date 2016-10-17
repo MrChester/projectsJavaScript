@@ -2,9 +2,9 @@
  * Created by fallenSoulDev on 10.09.2016.
  */
 let prepend = require('../homework1/prependFunction.js');
-let viewNodes = require('../_myTask/viewNodesFunction.js');
-let noRecursionDeleteTextNodes = require('../homework2/noRecursionDeleteTextNodes.js');
-let recursionDeleteTextNodes = require('../homework3/recursionDeleteTextNodes.js');
+// let viewNodes = require('../_myTask/viewNodesFunction.js');
+// let noRecursionDeleteTextNodes = require('../homework2/noRecursionDeleteTextNodes.js');
+// let recursionDeleteTextNodes = require('../homework3/recursionDeleteTextNodes.js');
 let consoleOutputElements = require('../homework4/consoleOutputElements.js');
 // let scanDom2 = require('../homework4/scanDom2.js');
 
