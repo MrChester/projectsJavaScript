@@ -10,7 +10,7 @@ function sum() {
             }
 
         } else {
-            result += arguments[i];
+            result += parseInt(arguments[i]);
         }
 
 
@@ -21,6 +21,4 @@ let array1 = [1, 2, 3];
 let array2 = [2, 4, 6];
 
 
-console.log(sum(array1, 5, 5, 8, 'string', array2));
-
-// console.log(2+2);
+console.log(sum(array1, 5, 5, 8, '5string', array2));
