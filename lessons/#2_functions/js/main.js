@@ -37,11 +37,11 @@ function greaterThan4(value){
 // замыкание
 function closures(a){
     let b = 10;
-    function func2(){
+    function func2(d){
         let c = 100;
-        return a + b + c;
+        return a + b + c + d;
     }
-    return func2();
+    return func2;
 }
 
 
@@ -57,4 +57,4 @@ console.log(res);
 
 // результат работы функции filter()
 let closuresRes = closures(1);
-console.log(closuresRes);
+console.log(closuresRes(139));
