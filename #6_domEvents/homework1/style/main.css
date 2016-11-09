@@ -63,11 +63,8 @@ ul, ol, li{
     margin: 2px 3px 0 0;
 }
 
-.accordion__item a i {
-    float: right;
-    transform: rotate(180deg);
-    padding: 2px 4px;
-    color: #ff8663;
+.accordion__trigger:after:active{
+    display: none;
 }
 
 .accordion__inner{

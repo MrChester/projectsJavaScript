@@ -5,23 +5,24 @@ console.log(content);
  document.body.addEventListener('click', function (e){
     e.preventDefault();
      var target = event.target;
-     var list = document.querySelectorAll('.accordion__item');
-
-     if (target.tagName != 'A') {
-         return;
-     }
-
+     console.log(target)
      var childrenContainer = target.parentNode.getElementsByTagName('ul')[0];
-
-     if (!childrenContainer) return; // no children
-     for(let i =0; i< content.length; i++){
-        let contains = content[i].classList.contains('active');
-        console.log(contains);
-        
-     }
-
-     childrenContainer.classList.toggle('active');
-
-     // childrenContainer.hidden = !childrenContainer.hidden;
+     var contains = childrenContainer.classList.contains('active');
      console.log(childrenContainer);
+
+     if (!childrenContainer) {
+     return;
+     } // no children
+     else{
+        for(let i = 0; i < content.length; i++){
+            content[i].classList.remove('active');
+        }
+        if(!contains){
+            childrenContainer.classList.remove('active');
+            childrenContainer.classList.add('active');
+        }
+        else{
+            childrenContainer.classList.remove('active');
+        }
+     }
  });
