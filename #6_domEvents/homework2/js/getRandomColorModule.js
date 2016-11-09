@@ -5,6 +5,8 @@ function getRandomColor() {
         color += letters[Math.round(Math.random() * 15)];
     }
     return color;
+    // end of  module
 }
 
+// module export
 module.exports = getRandomColor;

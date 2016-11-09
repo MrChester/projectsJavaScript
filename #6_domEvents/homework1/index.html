@@ -1,170 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=960">
     <title>accordion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
     <link rel="stylesheet" href="style/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="wrapper">
-    <div class="accordion">
-        <div class="logo"><img class="logo__pic" src="images/logo.png" alt="logo"></div>
-        <ul class="accordion__list">
-            <li class="accordion__item">
-                <a href="#" class="accordion__trigger">
-                    <span class="accordion__trigger-title">Основы языка и как на нём говорить правильно
-                    </span>
-                    <div class="caret"></div>
-                </a>
-                <ul class="accordion__inner">
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Лексическая структура
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Типы данных, значения и переменные
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Выражения и операторы инструкторы
-                        </span>
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__item">
-                <a href="#" class="accordion__trigger">
-                    <span class="accordion__trigger-title">Функции
-                    <div class="caret"></div>
-                    </span>
-                </a>
-                <ul class="accordion__inner">
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Определение и вызов функций
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Аргументы функций
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Функции как данные и методы
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Функции конструкторы
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Практическое применение функций
-                        </span>
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__item">
-                <a href="#" class="accordion__trigger">
-                    <span class="accordion__trigger-title">Обработка ошибок и отладка
-                    <div class="caret"></div>
-                    </span>
-                </a>
-                <ul class="accordion__inner">
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Виды ошибок
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Контекст выполнения
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Обект Error
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Throw, try, catch
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Консоль в Chrome Developer Tools
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Точки остановки (Breakpoints)
-                        </span>
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__item">
-                <a href="#" class="accordion__trigger">
-                    <span class="accordion__trigger-title">Объекты и массивы
-                    <div class="caret"></div>
-                    </span>
-                </a>
-                <ul class="accordion__inner">
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Перечисление свойств объекта
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Создание свойств объекта(продвинутый уровень)
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Усечение и увеличение массива
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Методы
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Методы итераторы
-                        </span>
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__item">
-                <a href="#" class="accordion__trigger">
-                    <span class="accordion__trigger-title">События
-                    <div class="caret"></div>
-                    </span>
-                </a>
-                <ul class="accordion__inner">
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Регистрация обработчиков событий
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Объект события
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">Действие по умолчанию
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">События мыши и клавиатуры
-                        </span>
-                    </li>
-                    <li class="accordion__inner-item">
-                        <span class="accordion__inner-item-text">События загрузки документа
-                        </span>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div class="wrapper">
+        <div class="accordion">
+            <div class="logo"><img class="logo__pic" src="images/logo.png" alt="logo"></div>
+            <ul class="accordion__list">
+                <li class="accordion__item">
+                    <a href="#" class="accordion__trigger">Основы языка и как на нём говорить правильно</a>
+                    <ul class="accordion__inner">
+                        <li class="accordion__inner-item">Лексическая структура</li>
+                        <li class="accordion__inner-item">Типы данных, значения и переменные</li>
+                        <li class="accordion__inner-item">Выражения и операторы инструкторы</li>
+                    </ul>
+                </li>
+                <li class="accordion__item">
+                    <a href="#" class="accordion__trigger">Функции</a>
+                    <ul class="accordion__inner">
+                        <li class="accordion__inner-item">Определение и вызов функций</li>
+                        <li class="accordion__inner-item">Аргументы функций</li>
+                        <li class="accordion__inner-item">Функции как данные и методы</li>
+                        <li class="accordion__inner-item">Функции конструкторы</li>
+                        <li class="accordion__inner-item">Практическое применение функций</li>
+                    </ul>
+                </li>
+                <li class="accordion__item">
+                    <a href="#" class="accordion__trigger">Обработка ошибок и отладка</a>
+                    <ul class="accordion__inner">
+                        <li class="accordion__inner-item">Виды ошибок</li>
+                        <li class="accordion__inner-item">Контекст выполнения</li>
+                        <li class="accordion__inner-item">Обект Error</li>
+                        <li class="accordion__inner-item">Throw, try, catch</li>
+                        <li class="accordion__inner-item">Консоль в Chrome Developer Tools</li>
+                        <li class="accordion__inner-item">Точки остановки (Breakpoints)</li>
+                    </ul>
+                </li>
+                <li class="accordion__item">
+                    <a href="#" class="accordion__trigger">Объекты и массивы</a>
+                    <ul class="accordion__inner">
+                        <li class="accordion__inner-item">Перечисление свойств объекта</li>
+                        <li class="accordion__inner-item">Создание свойств объекта(продвинутый уровень)</li>
+                        <li class="accordion__inner-item">Усечение и увеличение массива</li>
+                        <li class="accordion__inner-item">Методы</li>
+                        <li class="accordion__inner-item">Методы итераторы</li>
+                    </ul>
+                </li>
+                <li class="accordion__item">
+                    <a href="#" class="accordion__trigger">События</a>
+                    <ul class="accordion__inner">
+                        <li class="accordion__inner-item">Регистрация обработчиков событий</li>
+                        <li class="accordion__inner-item">Объект события</li>
+                        <li class="accordion__inner-item">Действие по умолчанию</li>
+                        <li class="accordion__inner-item">События мыши и клавиатуры</li>
+                        <li class="accordion__inner-item">События загрузки документа</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-
-
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.src.js"></script>-->
-<!--<script type="text/javascript">-->
-    <!--SystemJS.import('/js/main.js');-->
-<!--</script>-->
+    <!-- скрипты -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.src.js"></script>
+    <script>
+    SystemJS.import('js/main.js');
+    </script>
 </body>
+
 </html>
