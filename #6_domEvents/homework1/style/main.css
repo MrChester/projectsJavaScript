@@ -23,10 +23,11 @@ ul, ol, li{
 .logo__pic {
     display: block;
     margin: 0 auto;
-    margin-bottom: 23px;
+    margin-bottom: 10px;
 }
 
 .accordion__item {
+    position: relative;
     width: 460px;
     border-radius: 25px;
     background: #e7e7e7;
@@ -63,28 +64,38 @@ ul, ol, li{
     margin: 2px 3px 0 0;
 }
 
-.accordion__trigger:after:active{
-    display: none;
-}
-
 .accordion__inner{
-    display: none;
-}
-
-.accordion__inner, .active {
+     display: none;
     width: 460px;
     padding: 15px;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.active{
+.accordion__item.active .accordion__trigger{
+    background: #ff8663;
+}
+
+.accordion__item.active .accordion__inner{
     display: block;
-     width: 460px;
+    width: 460px;
     padding: 15px;
     margin: 0;
+    box-sizing: border-box;     
+}
+
+.accordion__item.active .accordion__trigger:after{
+    content: '';
+    float: right;
+    display: inline-block;
+    border: 7px solid transparent;
+    border-bottom: 12px solid #ffffff;
+    color: #33c1e3;
+    margin: -4px 2px 0 0;
 }
 
 .accordion__inner-item {
     padding: 0 0 15px 0;
     margin: 0;
+    color: #4f4f4f;
 }
